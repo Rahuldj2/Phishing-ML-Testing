@@ -35,10 +35,10 @@ model.fit(X_train, y_train)
 y_test_xgb = model.predict(X_test)
 print(X_test)
 y_train_xgb = model.predict(X_train)
-
+# print(model.predict(np.array([[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]])))
 # save XGBoost model to file
-import pickle
-pickle.dump(model, open("My.pickle.dat", "wb"))
+# import pickle
+# pickle.dump(model, open("My.pickle.dat", "wb"))
      
 import xgboost as xgb
 model.save_model('MyClassifier.model')
