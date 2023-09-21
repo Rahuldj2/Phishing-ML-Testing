@@ -368,7 +368,8 @@ def featureExtraction(url):
     dns = 1
 
   features.append(dns)
-  features.append(web_traffic(url))
+  features.append(1)
+  # features.append(web_traffic(url))
   features.append(1 if dns == 1 else domainAge(domain_name))
   features.append(1 if dns == 1 else domainEnd(domain_name))
   
@@ -389,4 +390,9 @@ def featureExtraction(url):
 feature_names = ['Domain', 'Have_IP', 'Have_At', 'URL_Length', 'URL_Depth','Redirection', 
                       'https_Domain', 'TinyURL', 'Prefix/Suffix', 'DNS_Record', 'Web_Traffic', 
                       'Domain_Age', 'Domain_End', 'iFrame', 'Mouse_Over','Right_Click', 'Web_Forwards', 'Label']
+
+# print(featureExtraction("http://1337x.to/torrent/1048648/American-Sniper-2014-MD-iTALiAN-DVDSCR-X264-BST-MT/"))
+
+# print(featureExtraction("https://www.youtube.com/watch?v=I1refTZp-pg"))
+# print("succdeses")
 
